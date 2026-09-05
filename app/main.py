@@ -19,8 +19,8 @@ class CarWashStation:
         for car in cars:
             if car.clean_mark < self.clean_power:
                 difference = self.clean_power - car.clean_mark
-                price = car.comfort_class * difference * \
-                    (self.average_rating / self.distance_from_city_center)
+                price = car.comfort_class * difference * (
+                    self.average_rating / self.distance_from_city_center)
                 total_price += round(price, 1)
                 car.clean_mark = self.clean_power
         return total_price
